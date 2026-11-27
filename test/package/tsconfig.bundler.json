@@ -1,0 +1,15 @@
+{
+  // Bundlers (Vite, webpack, ...), as in the Vite templates.
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "verbatimModuleSyntax": true,
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "types": [],
+    "skipLibCheck": false
+  },
+  "files": ["types.mts"]
+}

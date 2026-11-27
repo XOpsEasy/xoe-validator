@@ -1,0 +1,6 @@
+{
+  // For the linter and editors: the nearest tsconfig.json of the benchmarks.
+  // `npm run check` checks them with tsconfig.test.json.
+  "extends": "../tsconfig.test.json",
+  "include": ["./**/*"]
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "lib": ["es2022", "dom", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["node", "vite/client"],
+    // The site runs the library from its source, so it always shows the
+    // current code without a build of the package.
+    "paths": { "@xopseasy/xoe-validator": ["../src/index.ts"] }
+  },
+  "include": ["src", "plugins", "vite.config.ts"]
+}

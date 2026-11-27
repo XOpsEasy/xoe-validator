@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "unicorn", "oxc"],
+  "categories": { "correctness": "error" },
+  "options": { "typeAware": true },
+  "rules": {
+    "typescript/no-explicit-any": "error",
+    "typescript/await-thenable": "off",
+    "typescript/no-base-to-string": "off",
+    "typescript/restrict-template-expressions": "off",
+    "unicorn/no-new-array": "off"
+  },
+  "ignorePatterns": ["dist/**", "coverage/**", "examples/**", "site/**"]
+}

@@ -1,0 +1,97 @@
+name: CI
+
+on:
+  # Pull requests always run: required checks that are skipped would block the
+  # merge.
+  pull_request:
+    branches: [main]
+  # After a merge, changes to only docs/Markdown skip the run.
+  push:
+    branches: [main]
+    paths-ignore: ["docs/**", "**/*.md", "LICENSE"]
+  workflow_dispatch:
+
+# A new push to the same pull request or branch cancels the run in progress.
+concurrency:
+  group: ci-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  # The job names are what rulesets require: keep them stable (no versions).
+  verify:
+    name: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+      - run: npm ci
+      - name: Format, lint, type check and test (oxfmt, oxlint, tsc, Vitest)
+        run: npm run verify
+
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+          cache: npm
+      - run: npm ci
+      - name: Build (Vite, tsc, rollup-plugin-dts)
+        run: npm run build
+      - name: Bundle sizes (scripts/size.mjs)
+        run: npm run size
+      - name: Pack
+        run: mv "$(npm pack --silent)" package.tgz
+      # Checks the type declarations for every module resolution (ESM, CJS,
+      # bundlers): "Are the types wrong?".
+      - name: Check the types with "Are the types wrong?"
+        run: npx attw package.tgz
+      - uses: actions/upload-artifact@v7
+        with:
+          name: package
+          path: package.tgz
+          retention-days: 1
+
+  package:
+    name: package
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/download-artifact@v8
+        with:
+          name: package
+      # One job for all versions: jobs are billed per started minute.
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 20
+      - name: Use the package on Node 20
+        run: sh test/package/check.sh package.tgz
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - name: Use the package on Node 24
+        run: sh test/package/check.sh package.tgz
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 26
+      - name: Use the package on Node 26
+        run: sh test/package/check.sh package.tgz
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Use the package on Node 22, types on TypeScript 5.0, 5.9, 6.0, 7.0
+        run: sh test/package/check.sh package.tgz
+        env:
+          TS_VERSIONS: "5.0 5.9 6.0 7.0"

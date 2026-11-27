@@ -1,0 +1,14 @@
+{
+  // Node: ESM (types.mts) and CommonJS (types.cts) users.
+  "compilerOptions": {
+    "strict": true,
+    "noEmit": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "types": [],
+    "skipLibCheck": false
+  },
+  "files": ["types.mts", "types.cts"]
+}

@@ -1,0 +1,13 @@
+{
+  // Type check of the tests, the benchmarks and the Vitest config: Vitest
+  // doesn't check types, and tsconfig.json leaves the tests out.
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "include": ["src/**/*", "bench/**/*", "vitest.config.ts"],
+  "exclude": []
+}

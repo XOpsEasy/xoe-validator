@@ -1,0 +1,88 @@
+{
+  "name": "@xopseasy/xoe-validator",
+  "version": "0.1.0-alpha.3",
+  "description": "Type-safe validation for frontend and backend, in Node and browsers: immutable validators, issues as data, JSON Schema and OpenAPI, English and Serbian messages.",
+  "type": "module",
+  "main": "dist/xoe-validator.cjs",
+  "module": "dist/xoe-validator.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/xoe-validator.es.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/xoe-validator.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "homepage": "https://github.com/XOpsEasy/xoe-validator#readme",
+  "bugs": {
+    "url": "https://github.com/XOpsEasy/xoe-validator/issues"
+  },
+  "keywords": [
+    "validation",
+    "validator",
+    "schema",
+    "typescript",
+    "json-schema",
+    "openapi",
+    "standard-schema",
+    "node"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run build:types",
+    "build:types": "npm run check:src && rollup -c rollup.dts.config.mjs",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "bench": "npm run build && vitest bench --run",
+    "check": "npm run check:src && node node_modules/typescript/bin/tsc -p tsconfig.test.json",
+    "check:src": "node node_modules/typescript/bin/tsc",
+    "lint": "oxlint",
+    "format": "oxfmt",
+    "format:check": "oxfmt --check",
+    "verify": "npm run format:check && npm run lint && npm run check && npm test",
+    "size": "node scripts/size.mjs",
+    "test:package": "npm run build && attw --pack . && TS_VERSIONS='5.0 5.9 6.0 7.0' sh test/package/check.sh"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.5",
+    "@standard-schema/spec": "^1.1.0",
+    "@types/node": "^26.6.11",
+    "@typescript/typescript6": "^6.0.2",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "esbuild": "^0.28.2",
+    "oxfmt": "0.80.0",
+    "oxlint": "^1.95.0",
+    "oxlint-tsgolint": "^7.0.2009",
+    "rollup": "^4.68.8",
+    "rollup-plugin-dts": "^6.5.1",
+    "typescript": "^7.0.2",
+    "valibot": "^1.5.0",
+    "vite": "^8.4.0",
+    "vitest": "^5.1.2",
+    "zod": "^4.6.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOpsEasy/xoe-validator.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "sideEffects": false
+}

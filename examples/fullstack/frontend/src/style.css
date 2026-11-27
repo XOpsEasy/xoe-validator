@@ -1,0 +1,19 @@
+body { margin: 0; font-family: system-ui, sans-serif; background: #f5f6fa; color: #1c2030; }
+main { max-width: 640px; margin: 0 auto; padding: 32px 16px; }
+form { display: flex; flex-direction: column; gap: 6px; background: #fff; border: 1px solid #dde1ea; border-radius: 12px; padding: 24px; margin-top: 24px; }
+fieldset { display: flex; flex-direction: column; gap: 6px; border: 0; margin: 0; padding: 0; }
+fieldset[hidden] { display: none; }
+label { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; font-weight: 600; font-size: 0.9rem; }
+label.row { flex-direction: row; align-items: center; gap: 8px; font-weight: 500; }
+input, select { padding: 8px 10px; font: inherit; border: 1px solid #dde1ea; border-radius: 8px; }
+button { margin-top: 12px; padding: 8px 16px; font: inherit; border: 0; border-radius: 8px; background: #3d5afe; color: #fff; cursor: pointer; align-self: flex-start; }
+button:disabled { opacity: 0.6; }
+.error { color: #d63248; }
+.hint { color: #5d6578; font-size: 0.85rem; }
+pre { background: #f0f2f7; padding: 12px; border-radius: 8px; overflow: auto; }
+@media (prefers-color-scheme: dark) {
+  body { background: #0f1117; color: #e6e8ef; }
+  form { background: #171a23; border-color: #2c3242; }
+  input, select { background: #1f2330; color: #e6e8ef; border-color: #2c3242; }
+  pre { background: #1f2330; }
+}

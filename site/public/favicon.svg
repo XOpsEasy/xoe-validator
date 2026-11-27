@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="xoe-validator">
+  <!-- Three sheets of a carbon-copy form: the pink copy (issues), the yellow
+       copy (output) and the top sheet with a check. -->
+  <rect x="16" y="16" width="44" height="44" rx="3" fill="#ffb9c8"/>
+  <rect x="10" y="10" width="44" height="44" rx="3" fill="#ffe46b"/>
+  <rect x="4" y="4" width="44" height="44" rx="3" fill="#25287e"/>
+  <path d="M14.5 26.5 22.5 34.5 37.5 17.5" fill="none" stroke="#fdfdfb" stroke-width="6.5" stroke-linejoin="miter"/>
+</svg>
