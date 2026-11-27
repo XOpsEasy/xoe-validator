@@ -14,7 +14,7 @@ Documentation and live form examples: <https://validator.xopseasy.org/>
 ## Installation
 
 ```sh
-npm install @xopseasy/xoe-validator
+npm install @x-ops-easy/xoe-validator
 ```
 
 Before 1.0.0, a minor version (0.2.0, 0.3.0, ...) can change the API; see
@@ -35,7 +35,7 @@ import xoe, {
   type Infer,
   type InferInput,
   toFieldErrors,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 xoe.string().minLength(3).validate("jo");
 // { type: "error", value: [{ code: "string.minLength", params: { min: 3 }, path: [], message: "..." }] }
@@ -84,7 +84,7 @@ Every validator is also a named export. Importing only what you use lets
 bundlers drop the rest (the `xoe` object always includes every validator):
 
 ```ts
-import { coerce, object, string } from "@xopseasy/xoe-validator";
+import { coerce, object, string } from "@x-ops-easy/xoe-validator";
 
 const user = object({ name: string().minLength(2), age: coerce.number() });
 ```

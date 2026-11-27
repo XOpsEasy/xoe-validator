@@ -9,7 +9,7 @@ react-hook-form, is in [examples/fullstack](../examples/fullstack)
 ## The whole form and its steps
 
 ```ts
-import xoe, { type Infer, type XOEPath } from "@xopseasy/xoe-validator";
+import xoe, { type Infer, type XOEPath } from "@x-ops-easy/xoe-validator";
 
 const personal = xoe.object({
   firstName: xoe.string().trim().minLength(2),

@@ -63,7 +63,7 @@ jobs:
         run: npx attw --pack .
 
       # Pre-releases (0.1.0-alpha.1) get their own dist-tag ("alpha"), so
-      # `npm install @xopseasy/xoe-validator` never picks them by accident.
+      # `npm install @x-ops-easy/xoe-validator` never picks them by accident.
       - name: Publish to npm
         env:
           TAG: ${{ github.ref_name }}

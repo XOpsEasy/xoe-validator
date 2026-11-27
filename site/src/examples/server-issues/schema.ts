@@ -1,4 +1,4 @@
-import xoe, { type Infer } from "@xopseasy/xoe-validator";
+import xoe, { type Infer } from "@x-ops-easy/xoe-validator";
 
 // Shared by the browser and the server: one definition, the same rules.
 export const workspaceSchema = xoe.object({

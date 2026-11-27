@@ -13,7 +13,7 @@ export default defineConfig({
   resolve: {
     alias: {
       // The library runs from its source, see tsconfig.json.
-      "@xopseasy/xoe-validator": `${repoRoot}src/index.ts`,
+      "@x-ops-easy/xoe-validator": `${repoRoot}src/index.ts`,
     },
   },
   server: { fs: { allow: [repoRoot] } },

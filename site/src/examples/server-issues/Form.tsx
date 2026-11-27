@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { xoeSuccess } from "@xopseasy/xoe-validator";
+import { xoeSuccess } from "@x-ops-easy/xoe-validator";
 import { type FieldApi, type FormResult, useForm } from "../../lib/useForm.ts";
 import { CheckboxField, TextField } from "../../ui/fields.tsx";
 import { FormSheet } from "../../ui/sheets.tsx";

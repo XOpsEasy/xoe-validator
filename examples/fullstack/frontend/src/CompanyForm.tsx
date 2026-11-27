@@ -6,7 +6,7 @@ import {
   toFieldErrors,
   type XOEFieldErrors,
   type XOEIssue,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 import { companySchema, type Company } from "../../shared/schemas.ts";
 import { post } from "./api.ts";
 import { messages, type Lang } from "./messages.ts";

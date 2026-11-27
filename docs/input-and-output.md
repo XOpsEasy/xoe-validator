@@ -7,7 +7,7 @@ never mutated.
 ## Types
 
 ```ts
-import xoe, { Infer, InferInput } from "@xopseasy/xoe-validator";
+import xoe, { Infer, InferInput } from "@x-ops-easy/xoe-validator";
 
 const signUp = xoe.object({
   name: xoe.string().trim(),

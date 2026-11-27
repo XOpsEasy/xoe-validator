@@ -1,7 +1,7 @@
 // The three sheets of a carbon-copy form: the white one is filled in, the
 // yellow copy shows the parsed output, the pink copy the issues.
 import type { FormEvent, ReactNode } from "react";
-import type { XOEIssue } from "@xopseasy/xoe-validator";
+import type { XOEIssue } from "@x-ops-easy/xoe-validator";
 import { formatValue } from "../lib/format.ts";
 import type { FormResult } from "../lib/useForm.ts";
 

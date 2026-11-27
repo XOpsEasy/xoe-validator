@@ -7,7 +7,7 @@ Share rule lists with `with(...rules)`; the rule registries (`stringRules`,
 `createRule` give the rules:
 
 ```ts
-import xoe, { stringRules } from "@xopseasy/xoe-validator";
+import xoe, { stringRules } from "@x-ops-easy/xoe-validator";
 
 const passwordRules = [
   stringRules.minLength(8),

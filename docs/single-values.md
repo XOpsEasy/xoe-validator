@@ -20,7 +20,7 @@ A rule runs on its own with `execute`, without a validator (no type check, no
 empty values):
 
 ```ts
-import { rsRules, stringRules } from "@xopseasy/xoe-validator";
+import { rsRules, stringRules } from "@x-ops-easy/xoe-validator";
 
 stringRules.email().execute("ana@example.com"); // XOEResult
 rsRules.jmbg().execute(jmbg);

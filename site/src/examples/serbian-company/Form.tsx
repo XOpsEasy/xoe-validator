@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { localizeIssues, mapError } from "@xopseasy/xoe-validator";
+import { localizeIssues, mapError } from "@x-ops-easy/xoe-validator";
 import { type FieldApi, useForm } from "../../lib/useForm.ts";
 import { RadioField, Row, TextField } from "../../ui/fields.tsx";
 import { FormSheet } from "../../ui/sheets.tsx";

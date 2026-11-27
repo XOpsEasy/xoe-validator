@@ -17,7 +17,7 @@ their check digit, so `toJsonSchema` gives a `pattern` such as `^[0-9]{13}$`.
 | `companyNumber()` | Matični broj (MB) of a company or sole trader: 8 digits             | `rs.companyNumber` |
 
 ```ts
-import xoe, { rsRules } from "@xopseasy/xoe-validator";
+import xoe, { rsRules } from "@x-ops-easy/xoe-validator";
 
 // As rules:
 const jmbg = xoe.string().trim().with(rsRules.jmbg());

@@ -1,4 +1,4 @@
-import xoe, { type Infer, rsRules } from "@xopseasy/xoe-validator";
+import xoe, { type Infer, rsRules } from "@x-ops-easy/xoe-validator";
 
 const string = xoe.string.extend(rsRules);
 

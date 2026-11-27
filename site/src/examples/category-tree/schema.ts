@@ -1,4 +1,4 @@
-import xoe, { type Validator } from "@xopseasy/xoe-validator";
+import xoe, { type Validator } from "@x-ops-easy/xoe-validator";
 
 // A recursive type needs an explicit annotation; lazy() refers to the schema
 // while it is being defined.

@@ -243,7 +243,7 @@ configuration expires when it hasn't published within 2 days, so create one
 (the first, or a replacement) on the day of a release.
 
 A pre-release (`0.2.0-beta.1`) gets the dist-tag from its name (`beta`), so
-`npm install @xopseasy/xoe-validator` doesn't pick it; install it with `@beta`
+`npm install @x-ops-easy/xoe-validator` doesn't pick it; install it with `@beta`
 or the exact version.
 
 1. Check that `npm test` passes in `examples/fullstack`.

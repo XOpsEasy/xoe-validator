@@ -1,7 +1,7 @@
 // Schemas shared by the frontend and the backend: one definition, the same
 // rules and messages on both sides. Only what differs (how a username is
 // checked) is passed in.
-import xoe, { type Infer, type InferInput, rsRules } from "@xopseasy/xoe-validator";
+import xoe, { type Infer, type InferInput, rsRules } from "@x-ops-easy/xoe-validator";
 
 const string = xoe.string.extend(rsRules);
 

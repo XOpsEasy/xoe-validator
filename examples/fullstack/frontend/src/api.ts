@@ -1,4 +1,4 @@
-import type { XOEIssue } from "@xopseasy/xoe-validator";
+import type { XOEIssue } from "@x-ops-easy/xoe-validator";
 import type { IsUsernameFree } from "../../shared/schemas.ts";
 
 export type ApiResult<T> =

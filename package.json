@@ -1,5 +1,5 @@
 {
-  "name": "@xopseasy/xoe-validator",
+  "name": "@x-ops-easy/xoe-validator",
   "version": "0.1.0",
   "description": "Type-safe validation for frontend and backend, in Node and browsers: immutable validators, issues as data, JSON Schema and OpenAPI, English and Serbian messages.",
   "type": "module",

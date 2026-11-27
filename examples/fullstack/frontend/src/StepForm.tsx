@@ -6,7 +6,7 @@
 import { type ReactNode, useRef, useState } from "react";
 import { get, type Resolver, useForm, type UseFormReturn } from "react-hook-form";
 import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
-import { localized, localizeIssues, type XOEIssue } from "@xopseasy/xoe-validator";
+import { localized, localizeIssues, type XOEIssue } from "@x-ops-easy/xoe-validator";
 import {
   type Application,
   applicationSchema,

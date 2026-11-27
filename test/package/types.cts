@@ -1,5 +1,5 @@
 // A CommonJS TypeScript file: imports compile to require and use index.d.cts.
-import xoe, { type Infer, object, string } from "@xopseasy/xoe-validator";
+import xoe, { type Infer, object, string } from "@x-ops-easy/xoe-validator";
 
 type Equal<A, B> =
   (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2

@@ -1,4 +1,4 @@
-import xoe, { type Infer } from "@xopseasy/xoe-validator";
+import xoe, { type Infer } from "@x-ops-easy/xoe-validator";
 
 export const currencySchema = xoe.enum(["eur", "usd", "rsd"]);
 
