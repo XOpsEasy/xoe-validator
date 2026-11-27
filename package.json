@@ -82,7 +82,7 @@
     "url": "git+https://github.com/XOpsEasy/xoe-validator.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "sideEffects": false
 }

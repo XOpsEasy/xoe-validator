@@ -46,9 +46,8 @@ Rulesets require checks by job name, so keep the job names stable (versions go
 in the step names). Pass values from the event (branch names, titles) to scripts
 as environment variables, never as `${{ ... }}` inside `run`.
 
-The repository is private, so runs use the free Actions minutes of the
-organization (about 4-5 minutes per run). Keep jobs on Linux runners and avoid
-adding jobs that run on every push to feature branches.
+A run takes about 4-5 minutes. Keep jobs on Linux runners and avoid adding jobs
+that run on every push to feature branches.
 
 ## Branches
 
@@ -233,28 +232,31 @@ public API; update the example when the API changes.
 
 Pushing a version tag publishes the package: `.github/workflows/release.yml`
 checks that the tag matches `package.json` and is on `main`, runs the checks,
-builds, publishes to GitHub Packages and creates a GitHub release with the notes
-from `CHANGELOG.md`.
+builds, publishes to npm and creates a GitHub release with the notes from
+`CHANGELOG.md`.
 
-Until the library is public, releases are pre-releases (`0.1.0-alpha.1`,
-`0.1.0-alpha.2`, ...). They get the `alpha` dist-tag, so
-`npm install @xopseasy/xoe-validator` doesn't pick them; install them with
-`@alpha` or the exact version.
+The workflow publishes with npm trusted publishing (OIDC) and needs no npm
+token. The package settings on npmjs.com (Trusted publishing) name this
+repository and `release.yml`, with `npm publish` allowed. npm adds provenance to
+packages published this way from a public repository.
+
+A pre-release (`0.2.0-beta.1`) gets the dist-tag from its name (`beta`), so
+`npm install @xopseasy/xoe-validator` doesn't pick it; install it with `@beta`
+or the exact version.
 
 1. Check that `npm test` passes in `examples/fullstack`.
 2. On a branch from `main`: set the version
-   (`npm version 0.1.0-alpha.2 --no-git-tag-version`, which updates
-   `package-lock.json` too) and move the `Unreleased` changes in `CHANGELOG.md`
-   under the new version and date, with the link at the end.
-   `sh scripts/release-notes.sh 0.1.0-alpha.2` shows the notes the release will
-   get.
+   (`npm version 0.2.0 --no-git-tag-version`, which updates `package-lock.json`
+   too) and move the `Unreleased` changes in `CHANGELOG.md` under the new
+   version and date, with the link at the end.
+   `sh scripts/release-notes.sh 0.2.0` shows the notes the release will get.
 3. Merge the pull request into `main`.
 4. Tag `main` and push the tag:
 
    ```sh
    git switch main && git pull
-   git tag v0.1.0-alpha.2
-   git push origin v0.1.0-alpha.2
+   git tag v0.2.0
+   git push origin v0.2.0
    ```
 
 If the workflow fails before "Publish", fix it and push the tag again (delete it

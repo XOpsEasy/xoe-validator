@@ -17,6 +17,10 @@ project follows [Semantic Versioning](https://semver.org/).
 
 ### Changed
 
+- The package is published to npm instead of GitHub Packages:
+  `npm install @xopseasy/xoe-validator`, without a token. Remove
+  `@xopseasy:registry=https://npm.pkg.github.com` from your `.npmrc`, or npm
+  keeps installing from GitHub Packages.
 - Deno is no longer a supported runtime or a development tool: the tests run on
   Vitest, linting and formatting on oxlint and oxfmt, the type check on `tsc`
   (`npm run verify`, `npm run bench`). The build moved to Vite 8 and TypeScript

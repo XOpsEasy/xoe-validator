@@ -11,25 +11,12 @@ Type-safe validation for frontend and backend, in Node and browsers.
 
 ## Installation
 
-The package is private and published to GitHub Packages. Create a GitHub token
-with the `read:packages` permission (https://github.com/settings/tokens) and add
-the registry to the `.npmrc` of your project:
-
-```
-@xopseasy:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-```
-
-Then install it with the token in the `GITHUB_TOKEN` environment variable (don't
-commit the token itself):
-
 ```sh
-npm install @xopseasy/xoe-validator@alpha
+npm install @xopseasy/xoe-validator
 ```
 
-Until the first stable version, releases are pre-releases (`0.1.0-alpha.1`,
-...): install them with `@alpha` or the exact version. The API may still change
-between them; see [CHANGELOG.md](CHANGELOG.md).
+Before 1.0.0, a minor version (0.2.0, 0.3.0, ...) can change the API; see
+[CHANGELOG.md](CHANGELOG.md).
 
 ### Requirements
 
