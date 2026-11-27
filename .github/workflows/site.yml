@@ -23,7 +23,12 @@ jobs:
         with:
           node-version: 26
           cache: npm
-          cache-dependency-path: site/package-lock.json
+          cache-dependency-path: |
+            package-lock.json
+            site/package-lock.json
+      # The site imports the library source, whose dependencies resolve from
+      # the repository root.
+      - run: npm ci
       - run: npm ci
         working-directory: site
       - run: npm run verify
