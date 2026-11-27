@@ -1,4 +1,4 @@
-import xoe, { type Infer, type InferInput } from "@xopseasy/xoe-validator";
+import xoe, { type Infer, type InferInput } from "@x-ops-easy/xoe-validator";
 
 export const contactSchema = xoe.object({
   name: xoe.string().trim().minLength(2),

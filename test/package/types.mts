@@ -5,7 +5,7 @@ import xoe, {
   type InferInput,
   type IsAsync,
   type Validator,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 type Equal<A, B> =
   (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2

@@ -1,6 +1,6 @@
 // Stands in for a backend route. With Hono or Express it's the same code:
 // validate the body, answer 400 with the issues, or go on with the output.
-import type { XOEIssue } from "@xopseasy/xoe-validator";
+import type { XOEIssue } from "@x-ops-easy/xoe-validator";
 import { type Workspace, workspaceSchema } from "./schema.ts";
 
 const existing = ["acme", "foleon"];

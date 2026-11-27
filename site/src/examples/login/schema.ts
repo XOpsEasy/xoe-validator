@@ -1,4 +1,4 @@
-import xoe, { type Infer } from "@xopseasy/xoe-validator";
+import xoe, { type Infer } from "@x-ops-easy/xoe-validator";
 
 // Create a schema once, at module level, and reuse it.
 export const loginSchema = xoe.object({

@@ -25,7 +25,7 @@
     "esModuleInterop": true,
 
     // The benchmarks import the built package by name; types come from src.
-    "paths": { "@xopseasy/xoe-validator": ["./src/index.ts"] }
+    "paths": { "@x-ops-easy/xoe-validator": ["./src/index.ts"] }
   },
   "include": ["src/**/*"],
   "exclude": ["**/tests/**"]

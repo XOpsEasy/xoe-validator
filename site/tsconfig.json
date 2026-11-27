@@ -15,7 +15,7 @@
     "types": ["node", "vite/client"],
     // The site runs the library from its source, so it always shows the
     // current code without a build of the package.
-    "paths": { "@xopseasy/xoe-validator": ["../src/index.ts"] }
+    "paths": { "@x-ops-easy/xoe-validator": ["../src/index.ts"] }
   },
   "include": ["src", "plugins", "vite.config.ts"]
 }

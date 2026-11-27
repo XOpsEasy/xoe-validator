@@ -21,7 +21,7 @@ Form libraries show `issue.message`, so pass a translated validator with
 
 ```ts
 import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
-import { localized, srMessages } from "@xopseasy/xoe-validator";
+import { localized, srMessages } from "@x-ops-easy/xoe-validator";
 
 useForm({ resolver: standardSchemaResolver(localized(signUp, srMessages)) });
 ```

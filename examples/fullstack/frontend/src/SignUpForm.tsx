@@ -8,7 +8,7 @@ import {
   localized,
   localizeIssues,
   toFieldErrors,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 import { signUpSchema, type SignUp } from "../../shared/schemas.ts";
 import { isUsernameFree, post } from "./api.ts";
 import { messages, type Lang } from "./messages.ts";

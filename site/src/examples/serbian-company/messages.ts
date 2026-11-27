@@ -2,7 +2,7 @@ import {
   enMessages,
   srMessages,
   type XOEMessages,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 export type Lang = "en" | "sr";
 

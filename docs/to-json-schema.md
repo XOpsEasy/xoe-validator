@@ -6,7 +6,7 @@ documentation, form generators or LLM structured output. The schema you validate
 with is the one you document:
 
 ```ts
-import xoe, { toJsonSchema } from "@xopseasy/xoe-validator";
+import xoe, { toJsonSchema } from "@x-ops-easy/xoe-validator";
 
 const createUser = xoe.object({
   email: xoe.string().email(),

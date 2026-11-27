@@ -6,7 +6,7 @@ Rules are created with `createRule`. Add them to a validator type with `extend`,
 which returns a new factory (the original is not changed):
 
 ```ts
-import xoe, { createRule } from "@xopseasy/xoe-validator";
+import xoe, { createRule } from "@x-ops-easy/xoe-validator";
 
 const slug = (message?: string) =>
   createRule<string>({
@@ -33,7 +33,7 @@ rule to a single validator, use `with(rule)` or `refine` instead.
 with it too:
 
 ```ts
-import { defineValidator } from "@xopseasy/xoe-validator";
+import { defineValidator } from "@x-ops-easy/xoe-validator";
 
 const bigint = defineValidator({
   type: "bigint",

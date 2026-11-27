@@ -2,6 +2,8 @@
 
 Type-safe validation for frontend and backend, in Node and browsers.
 
+Documentation and live form examples: <https://validator.xopseasy.org/>
+
 - One immutable, chainable builder: every call returns a new validator.
 - Invalid data never throws: results hold issues with codes, params and paths.
 - Typed input and output, sync and async validation with cancelling and
@@ -11,25 +13,12 @@ Type-safe validation for frontend and backend, in Node and browsers.
 
 ## Installation
 
-The package is private and published to GitHub Packages. Create a GitHub token
-with the `read:packages` permission (https://github.com/settings/tokens) and add
-the registry to the `.npmrc` of your project:
-
-```
-@xopseasy:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-```
-
-Then install it with the token in the `GITHUB_TOKEN` environment variable (don't
-commit the token itself):
-
 ```sh
-npm install @xopseasy/xoe-validator@alpha
+npm install @x-ops-easy/xoe-validator
 ```
 
-Until the first stable version, releases are pre-releases (`0.1.0-alpha.1`,
-...): install them with `@alpha` or the exact version. The API may still change
-between them; see [CHANGELOG.md](CHANGELOG.md).
+Before 1.0.0, a minor version (0.2.0, 0.3.0, ...) can change the API; see
+[CHANGELOG.md](CHANGELOG.md).
 
 ### Requirements
 
@@ -46,7 +35,7 @@ import xoe, {
   type Infer,
   type InferInput,
   toFieldErrors,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 xoe.string().minLength(3).validate("jo");
 // { type: "error", value: [{ code: "string.minLength", params: { min: 3 }, path: [], message: "..." }] }
@@ -95,7 +84,7 @@ Every validator is also a named export. Importing only what you use lets
 bundlers drop the rest (the `xoe` object always includes every validator):
 
 ```ts
-import { coerce, object, string } from "@xopseasy/xoe-validator";
+import { coerce, object, string } from "@x-ops-easy/xoe-validator";
 
 const user = object({ name: string().minLength(2), age: coerce.number() });
 ```

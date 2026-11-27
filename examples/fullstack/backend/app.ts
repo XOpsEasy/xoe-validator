@@ -2,7 +2,7 @@
 // answers 400 with the issues as data: the client maps them to fields and
 // translates them (localizeIssues), also in a language the server doesn't know.
 import { Hono } from "hono";
-import { toJsonSchema, type XOEIssue } from "@xopseasy/xoe-validator";
+import { toJsonSchema, type XOEIssue } from "@x-ops-easy/xoe-validator";
 import {
   companySchema,
   importSchema,

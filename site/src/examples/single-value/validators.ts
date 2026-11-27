@@ -2,7 +2,7 @@ import xoe, {
   rsRules,
   type XOEIssue,
   type XOEResult,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 type Entry = {
   label: string;

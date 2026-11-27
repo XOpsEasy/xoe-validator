@@ -17,7 +17,7 @@ character long.", "Must be before 2024-01-15."), so English apps don't need
 your own catalog.
 
 ```ts
-import { localizeIssues, srMessages } from "@xopseasy/xoe-validator";
+import { localizeIssues, srMessages } from "@x-ops-easy/xoe-validator";
 
 localizeIssues(result.value, srMessages);
 // [{ code: "string.minLength", message: "Tekst mora imati najmanje 3 karaktera.", ... }]
@@ -35,7 +35,7 @@ in `validate`, `validateAsync` and the Standard Schema interface; its types,
 validation and `toJsonSchema` don't change.
 
 ```ts
-import { localized, srMessages } from "@xopseasy/xoe-validator";
+import { localized, srMessages } from "@x-ops-easy/xoe-validator";
 
 const signUpSr = localized(signUp, srMessages);
 
@@ -91,7 +91,7 @@ import {
   localizeIssues,
   toFieldErrors,
   XOEMessages,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 const sr: XOEMessages = {
   required: "Polje je obavezno.",

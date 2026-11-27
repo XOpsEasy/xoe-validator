@@ -1,4 +1,4 @@
-import xoe, { createRule, type Infer } from "@xopseasy/xoe-validator";
+import xoe, { createRule, type Infer } from "@x-ops-easy/xoe-validator";
 
 const passesLuhn = (digits: string) => {
   const sum = [...digits].reverse().reduce((total, char, index) => {

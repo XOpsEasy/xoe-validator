@@ -1,6 +1,6 @@
 // Loads the packed package with require, as a CommonJS user would.
 const assert = require("node:assert/strict");
-const lib = require("@xopseasy/xoe-validator");
+const lib = require("@x-ops-easy/xoe-validator");
 
 const xoe = lib.default;
 assert.equal(typeof xoe.string, "function");

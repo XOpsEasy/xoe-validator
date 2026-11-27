@@ -6,7 +6,7 @@ import {
   toFieldErrors,
   type XOEIssue,
   type XOEResult,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 import { getIn, setIn } from "./paths.ts";
 
 export type FormResult<Output = unknown> = XOEResult<

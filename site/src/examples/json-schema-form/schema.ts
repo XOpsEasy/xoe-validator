@@ -1,4 +1,4 @@
-import xoe, { type Infer } from "@xopseasy/xoe-validator";
+import xoe, { type Infer } from "@x-ops-easy/xoe-validator";
 
 // A JSON Schema, e.g. from an OpenAPI document or a CMS. Written "as const",
 // the output type is inferred from it.

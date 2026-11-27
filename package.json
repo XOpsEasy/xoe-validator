@@ -1,6 +1,6 @@
 {
-  "name": "@xopseasy/xoe-validator",
-  "version": "0.1.0-alpha.3",
+  "name": "@x-ops-easy/xoe-validator",
+  "version": "0.1.0",
   "description": "Type-safe validation for frontend and backend, in Node and browsers: immutable validators, issues as data, JSON Schema and OpenAPI, English and Serbian messages.",
   "type": "module",
   "main": "dist/xoe-validator.cjs",
@@ -28,7 +28,7 @@
   "engines": {
     "node": ">=20"
   },
-  "homepage": "https://github.com/XOpsEasy/xoe-validator#readme",
+  "homepage": "https://validator.xopseasy.org/",
   "bugs": {
     "url": "https://github.com/XOpsEasy/xoe-validator/issues"
   },
@@ -82,7 +82,7 @@
     "url": "git+https://github.com/XOpsEasy/xoe-validator.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "sideEffects": false
 }

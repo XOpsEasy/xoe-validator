@@ -6,7 +6,7 @@ import xoe, {
   type InferInput,
   rsRules,
   type XOEPath,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 const string = xoe.string.extend(rsRules);
 

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { toJsonSchema } from "@xopseasy/xoe-validator";
+import { toJsonSchema } from "@x-ops-easy/xoe-validator";
 import { createUserSchema } from "./schema.ts";
 
 const targets = [

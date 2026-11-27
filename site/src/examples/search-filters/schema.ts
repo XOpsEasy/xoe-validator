@@ -1,4 +1,4 @@
-import xoe from "@xopseasy/xoe-validator";
+import xoe from "@x-ops-easy/xoe-validator";
 
 // A query string holds only strings, and users edit it by hand. coerce
 // converts the strings; catch() replaces a wrong value with a fallback, so a

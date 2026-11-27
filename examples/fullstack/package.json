@@ -14,7 +14,7 @@
   "dependencies": {
     "@hono/node-server": "^2.1.5",
     "@hookform/resolvers": "^5.9.2",
-    "@xopseasy/xoe-validator": "file:../..",
+    "@x-ops-easy/xoe-validator": "file:../..",
     "hono": "^4.13.14",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",

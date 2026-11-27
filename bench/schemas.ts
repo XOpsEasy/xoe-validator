@@ -1,7 +1,7 @@
 // The same schemas in xoe, Zod and Valibot. All three remove unknown keys
 // from objects and collect every issue (they don't stop at the first one),
 // so they do the same work.
-import xoe from "@xopseasy/xoe-validator";
+import xoe from "@x-ops-easy/xoe-validator";
 import { z } from "zod";
 import * as v from "valibot";
 

@@ -1,4 +1,4 @@
-import xoe, { type Infer, rsRules } from "@xopseasy/xoe-validator";
+import xoe, { type Infer, rsRules } from "@x-ops-easy/xoe-validator";
 
 // The Serbian rules become methods of the string validator.
 const string = xoe.string.extend(rsRules);

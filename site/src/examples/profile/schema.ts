@@ -1,4 +1,4 @@
-import xoe, { type Infer } from "@xopseasy/xoe-validator";
+import xoe, { type Infer } from "@x-ops-easy/xoe-validator";
 
 // undefined, null and "" count as empty. An empty input is "", so a form
 // needs no special handling for fields the user left blank.

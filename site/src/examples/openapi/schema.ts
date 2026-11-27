@@ -1,4 +1,4 @@
-import xoe from "@xopseasy/xoe-validator";
+import xoe from "@x-ops-easy/xoe-validator";
 
 // meta() and describe() document a value. Validation doesn't read them;
 // toJsonSchema() writes them to the schema.

@@ -7,7 +7,7 @@ import {
   srMessages,
   toFieldErrors,
   type XOEIssue,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 import { app } from "./backend/app.ts";
 import { stepOf, stepSchema } from "./shared/application.ts";
 

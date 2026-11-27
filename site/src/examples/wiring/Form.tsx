@@ -2,7 +2,7 @@
 // toFieldErrors(). The other examples use useForm.ts (the second tab), which
 // is this pattern with a few more details.
 import { type FormEvent, useState } from "react";
-import xoe, { toFieldErrors } from "@xopseasy/xoe-validator";
+import xoe, { toFieldErrors } from "@x-ops-easy/xoe-validator";
 import { ResultSheets } from "../../ui/sheets.tsx";
 
 const schema = xoe.object({

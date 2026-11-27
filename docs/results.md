@@ -12,7 +12,7 @@ import {
   mapError,
   toFieldErrors,
   tryCatch,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 const parsed = tryCatch(
   () => JSON.parse(text) as unknown,

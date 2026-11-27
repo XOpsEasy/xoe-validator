@@ -7,7 +7,7 @@ import xoe, {
   string,
   toFieldErrors,
   toJsonSchema,
-} from "@xopseasy/xoe-validator";
+} from "@x-ops-easy/xoe-validator";
 
 const signUp = xoe.object({
   name: xoe.string().trim().minLength(2),
