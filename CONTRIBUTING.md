@@ -238,7 +238,9 @@ builds, publishes to npm and creates a GitHub release with the notes from
 The workflow publishes with npm trusted publishing (OIDC) and needs no npm
 token. The package settings on npmjs.com (Trusted publishing) name this
 repository and `release.yml`, with `npm publish` allowed. npm adds provenance to
-packages published this way from a public repository.
+packages published this way from a public repository. A new trusted publisher
+configuration expires when it hasn't published within 2 days, so create one
+(the first, or a replacement) on the day of a release.
 
 A pre-release (`0.2.0-beta.1`) gets the dist-tag from its name (`beta`), so
 `npm install @xopseasy/xoe-validator` doesn't pick it; install it with `@beta`

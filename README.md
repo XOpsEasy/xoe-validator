@@ -2,6 +2,8 @@
 
 Type-safe validation for frontend and backend, in Node and browsers.
 
+Documentation and live form examples: <https://validator.xopseasy.org/>
+
 - One immutable, chainable builder: every call returns a new validator.
 - Invalid data never throws: results hold issues with codes, params and paths.
 - Typed input and output, sync and async validation with cancelling and

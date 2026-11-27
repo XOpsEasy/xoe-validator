@@ -6,6 +6,8 @@ project follows [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-27
+
 ### Added
 
 - Docs: [Migrating from Zod](docs/migrating-from-zod.md) and
@@ -90,6 +92,12 @@ project follows [Semantic Versioning](https://semver.org/).
   longer makes validation throw; type and literal messages no longer read
   `Object.prototype` names or drop array brackets.
 - `catchall(v).passthrough()` keeps the catchall.
+
+## [0.1.0-alpha.4] - 2026-11-27
+
+The 0.1.0 code, published by hand to create the package on npm, so that npm
+could trust the release workflow to publish 0.1.0 with provenance. Install
+0.1.0 instead.
 
 ## [0.1.0-alpha.3] - 2026-10-27
 
@@ -284,8 +292,5 @@ one immutable, functional validator builder.
 
 Last version before the rewrite.
 
-[Unreleased]: https://github.com/XOpsEasy/xoe-validator/compare/v0.1.0-alpha.3...HEAD
-[0.1.0-alpha.3]: https://github.com/XOpsEasy/xoe-validator/compare/v0.1.0-alpha.2...v0.1.0-alpha.3
-[0.1.0-alpha.2]: https://github.com/XOpsEasy/xoe-validator/compare/v0.1.0-alpha.1...v0.1.0-alpha.2
-[0.1.0-alpha.1]: https://github.com/XOpsEasy/xoe-validator/compare/797ccb4...v0.1.0-alpha.1
-[0.0.2-alpha.9]: https://github.com/XOpsEasy/xoe-validator/tree/797ccb4
+[Unreleased]: https://github.com/XOpsEasy/xoe-validator/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/XOpsEasy/xoe-validator/releases/tag/v0.1.0
