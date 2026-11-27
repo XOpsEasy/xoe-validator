@@ -7,6 +7,7 @@
 # without notes.
 set -eu
 
+repository="https://github.com/XOpsEasy/xoe-validator"
 version="$1"
 notes="$(awk -v heading="## [$version]" '
   index($0, heading) == 1 { found = 1; next }
@@ -19,4 +20,7 @@ if [ -z "$(printf %s "$notes" | tr -d '[:space:]')" ]; then
   echo "CHANGELOG.md has no notes for $version." >&2
   exit 1
 fi
-printf '%s\n' "$notes"
+# A link to a file of the repository (docs/async.md) would resolve against the
+# release page, so it points to the file at the version's tag.
+printf '%s\n' "$notes" |
+  sed -E "s|]\\(([^)/:#][^):]*)\\)|](${repository}/blob/v${version}/\\1)|g"
