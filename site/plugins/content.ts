@@ -12,6 +12,7 @@ import type { Plugin } from "vite";
 const CODE = "\0xoe-code:";
 const DOC = "\0xoe-doc:";
 const REPOSITORY = "https://github.com/XOpsEasy/xoe-validator";
+const SITE = "https://validator.xopseasy.org/";
 
 const languages = ["ts", "tsx", "json", "sh", "html"] as const;
 type Language = (typeof languages)[number];
@@ -61,6 +62,9 @@ export const content = ({ repoRoot, docsDir }: Options): Plugin => {
 
   /** A link in a Markdown file, as a route of the site or a GitHub URL. */
   const linkTarget = (href: string, file: string): string => {
+    // README.md links to the published site, so it works on npm and GitHub;
+    // on the site itself those links stay routes of the current build.
+    if (href.startsWith(SITE)) return href.slice(SITE.length) || "#/";
     if (/^[a-z]+:/i.test(href)) return href;
     const [path, anchor] = href.split("#");
     // "#section" alone is a link into the page itself.

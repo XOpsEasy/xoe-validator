@@ -18,7 +18,7 @@ npm install @x-ops-easy/xoe-validator
 ```
 
 Before 1.0.0, a minor version (0.2.0, 0.3.0, ...) can change the API; see
-[CHANGELOG.md](CHANGELOG.md).
+[CHANGELOG.md](https://github.com/XOpsEasy/xoe-validator/blob/main/CHANGELOG.md).
 
 ### Requirements
 
@@ -73,7 +73,7 @@ Each issue is an object:
 ```
 
 so it can be translated (`localizeIssues(issues, srMessages)`), sent from an API
-or mapped to form fields. See [Issues and errors](docs/errors.md).
+or mapped to form fields. See [Issues and errors](https://validator.xopseasy.org/#/docs/errors).
 
 Import types with `type` (`type Infer`, `type XOEIssue`, ...): projects with
 `verbatimModuleSyntax`, such as the Vite templates, require it.
@@ -95,41 +95,41 @@ repository measures it).
 
 ## Documentation
 
-- [Migrating from Zod](docs/migrating-from-zod.md)
-- [Validators and rules](docs/validators.md)
-- [Validating single values](docs/single-values.md)
-- [Objects](docs/objects.md)
-- [Unions, records and recursion](docs/unions-and-records.md)
-- [Common methods](docs/methods.md)
-- [Input and output](docs/input-and-output.md)
-- [Composing validators](docs/composing.md)
-- [Async validation](docs/async.md)
-- [Multi-step forms](docs/multi-step-forms.md)
-- [Issues and errors](docs/errors.md)
-- [Working with results](docs/results.md)
-- [Translations](docs/translations.md)
-- [Country rules](docs/country-rules.md)
-- [Custom rules and types](docs/custom-rules.md)
-- [Validating with JSON Schema](docs/json-schema.md)
-- [From xoe to JSON Schema](docs/to-json-schema.md)
-- [Standard Schema](docs/standard-schema.md)
+- [Migrating from Zod](https://validator.xopseasy.org/#/docs/migrating-from-zod)
+- [Validators and rules](https://validator.xopseasy.org/#/docs/validators)
+- [Validating single values](https://validator.xopseasy.org/#/docs/single-values)
+- [Objects](https://validator.xopseasy.org/#/docs/objects)
+- [Unions, records and recursion](https://validator.xopseasy.org/#/docs/unions-and-records)
+- [Common methods](https://validator.xopseasy.org/#/docs/methods)
+- [Input and output](https://validator.xopseasy.org/#/docs/input-and-output)
+- [Composing validators](https://validator.xopseasy.org/#/docs/composing)
+- [Async validation](https://validator.xopseasy.org/#/docs/async)
+- [Multi-step forms](https://validator.xopseasy.org/#/docs/multi-step-forms)
+- [Issues and errors](https://validator.xopseasy.org/#/docs/errors)
+- [Working with results](https://validator.xopseasy.org/#/docs/results)
+- [Translations](https://validator.xopseasy.org/#/docs/translations)
+- [Country rules](https://validator.xopseasy.org/#/docs/country-rules)
+- [Custom rules and types](https://validator.xopseasy.org/#/docs/custom-rules)
+- [Validating with JSON Schema](https://validator.xopseasy.org/#/docs/json-schema)
+- [From xoe to JSON Schema](https://validator.xopseasy.org/#/docs/to-json-schema)
+- [Standard Schema](https://validator.xopseasy.org/#/docs/standard-schema)
 
 ## Examples
 
-[examples/fullstack](examples/fullstack): a React frontend and a Hono backend
+[examples/fullstack](https://github.com/XOpsEasy/xoe-validator/tree/main/examples/fullstack): a React frontend and a Hono backend
 sharing their schemas, with react-hook-form, Serbian rules, server issues on
 form fields and OpenAPI.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for development, releases, the code
+See [CONTRIBUTING.md](https://github.com/XOpsEasy/xoe-validator/blob/main/CONTRIBUTING.md) for development, releases, the code
 principles (functional style, local mutation only, errors as values) and the
 project conventions.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md).
+See [CHANGELOG.md](https://github.com/XOpsEasy/xoe-validator/blob/main/CHANGELOG.md).
 
 ## License
 
-MIT, see [LICENSE](LICENSE).
+MIT, see [LICENSE](https://github.com/XOpsEasy/xoe-validator/blob/main/LICENSE).
